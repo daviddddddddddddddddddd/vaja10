@@ -50,35 +50,3 @@ DALjE:		adr r0, STEV1
 		str r1,[r0]
 
 __end:		b__end
-3.
-		.text
-STEV1:		.word 0
-STEV2:		.word 1
-STEV3:		.word -1
-
-
-		.align
-		.global__start
-__start:
-		adr r0,STEV2
-		ldr,r2,[r0]
-
-
-		adr r0,STEV3
-		ldr,r3,[r0]
-
-		mov r1,r2
-		cmp r2,r3
-		bgt DALJE
-		mov r1,r3
-
-DALjE:		adr r0, STEV1
-		str r1,[r0]
-
-__end:		b__end
-
-
-
-
-
-		
